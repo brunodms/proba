@@ -10,4 +10,4 @@ pbi = binom.pmf (x, n, p)
 pba = binom.cdf(x, n, p)
 
 print ("Probabilidade binomial individual = ", format(pbi, ".4f"))
-print ("Probabilidade binomial acumulada = ",  format(pba))
+print ("Probabilidade binomial acumulada = ",  format(pba, ".4f"))
