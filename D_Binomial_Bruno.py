@@ -9,9 +9,9 @@ while True:
     print("Encerrando programa...")
     break
 
-  n = int (input ("Número de Observações(Inteiro): ")) 
+  n = int (input ("Número de Observações(Inteiro): "))
 
-  p = float (input ("Probabilidade de Sucesso(%): ")) 
+  p = float (input ("Probabilidade de Sucesso em %(ex: 50): ")) 
 
   x = int (input ("Número de Sucessos(Inteiro): "))
 
