@@ -1,13 +1,26 @@
-from scipy.stats import binom 
+from scipy.stats import binom
 
-n = float (input ("N° de observações: ")) 
+while True:
+  print("Menu:\n 1 - Probabilidade Binomial Individual\n 2 - Probabilidade Binomial Acumulada\n 0 - Sair do programa")
+  
+  tp = int (input("Tipo de operação: "))
 
-p = float (input ("Probabilidade de sucesso: ")) 
+  if (tp == 0 or tp > 2):
+    print("Encerrando programa...")
+    break
 
-x = int (input ("Quantidades de sucessos: ")) 
+  n = int (input ("Número de Observações(Inteiro): ")) 
 
-pbi = binom.pmf (x, n, p)
-pba = binom.cdf(x, n, p)
+  p = float (input ("Probabilidade de Sucesso(%): ")) 
 
-print ("Probabilidade binomial individual = ", format(pbi, ".4f"))
-print ("Probabilidade binomial acumulada = ",  format(pba, ".4f"))
+  x = int (input ("Número de Sucessos(Inteiro): "))
+
+  p = p / 100
+
+  if (tp == 1):
+    pbi = binom.pmf (x, n, p)
+    print (f"Probabilidade Binomial Individual = {pbi:.2%}")
+
+  elif (tp == 2):
+    pba = binom.cdf(x, n, p)
+    print (f"Probabilidade Binomial Acumulada = {pba:.2%}")
